@@ -8,12 +8,12 @@ class Hero:
     def attack(self, other):
         #"""Атакует другого героя, уменьшая его здоровье на величину силы удара."""
         if isinstance(other, Hero):
-            damage = random.randint(15, 20)
-            other.health -= damage
+            attack_power = random.randint(15, 20)
+            other.health -= attack_power
             # Если здоровье становится отрицательным, устанавливаем его в 0
             if other.health < 0:
                 other.health = 0
-            print(f"{self.name} атакует {other.name}, нанося {damage} урона. У {other.name} осталось {other.health} здоровья.")
+            print(f"{self.name} атакует {other.name}, нанося {attack_power} урона. У {other.name} осталось {other.health} здоровья.")
         else:
             print("Цель атаки должна быть экземпляром класса Hero.")
 
